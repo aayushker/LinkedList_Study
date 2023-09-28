@@ -21,12 +21,15 @@ int main(){
     }
     else{
         int ele;
-        printf("Enter the element you want to enter:");
+        printf("Enter element you want to enter:");
         scanf("%d", &ele);
+        while (ptr->link != NULL){
+        ptr = ptr->link;
+        }
+
         New->data = ele;
-        New->link = start;
-        start = New;
-        
+        ptr->link = New;
+        New->link = NULL;
     }
 
     ptr = start;
@@ -35,5 +38,4 @@ int main(){
         printf("%d\n", ptr->data);
         ptr = ptr->link;
     }
-
 }
