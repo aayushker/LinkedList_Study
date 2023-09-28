@@ -5,7 +5,7 @@
 
 struct node{
     int data;                           //these are the member variable
-    struct node *link;
+    struct node *link;                  //self referential pointer
 };
 
 int main(){
