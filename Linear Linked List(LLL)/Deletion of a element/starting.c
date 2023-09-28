@@ -16,7 +16,7 @@ int main(){
     ptr = start;
 
     if (start == NULL){
-        printf("Overflow, exiting...");
+        printf("Underflow, exiting...");
     }
     else{
         start=ptr->link;
