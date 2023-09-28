@@ -20,15 +20,17 @@ int main(){
         printf("Overflow, exiting...");
     }
     else{
-        int ele;
+        int ele,key;
         printf("Enter element you want to enter:");
         scanf("%d", &ele);
-        while (ptr->link != NULL){
+        printf("Enter after which key value you want to add");
+        scanf("%d", &key);
+        while (ptr->data != key){
         ptr = ptr->link;
         }
-        New->data = ele;
-        ptr->link = New;
-        New->link = NULL;
+        New->link=ptr->link;
+        ptr->link=New;
+        New->data=ele;
     }
 
     ptr = start;
