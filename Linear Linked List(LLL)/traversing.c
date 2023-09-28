@@ -18,10 +18,10 @@ int main(){
     n4.link=NULL;
     start=&n1;
     ptr=start;
-    while (ptr->link!=NULL){
+    while (ptr!=NULL){
         printf("%d\n",ptr->data);
         ptr=ptr->link;
     }
 
-    struct node *p = (struct node *)malloc(sizeof(struct node));
+    // struct node *p = (struct node *)malloc(sizeof(struct node));
 }
