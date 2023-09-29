@@ -7,8 +7,7 @@ struct node{
 };
 
 int main(){
-    struct node n1, n2, n3, n4, n5, *start, *New, *ptr, *ptr1;
-    New = malloc(sizeof(struct node));
+    struct node n1, n2, n3, n4, n5, *start, *ptr, *ptr1;
     n1.data = 100;
     n2.data = 200;
     n3.data = 300;
