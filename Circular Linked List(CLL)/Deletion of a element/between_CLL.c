@@ -18,7 +18,7 @@ int main(){
     ptr1  = last;
     ptr = last->link;
 
-    if (last == NULL){
+    if (ptr == NULL){
         printf("Underflow, exiting...");
         return;
     }
