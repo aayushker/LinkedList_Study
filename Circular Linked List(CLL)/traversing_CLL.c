@@ -6,7 +6,6 @@ struct node{
     struct node *link;
 };
 
-
 int main(){
     struct node n1, n2, n3, *new, *ptr, *last;
     
