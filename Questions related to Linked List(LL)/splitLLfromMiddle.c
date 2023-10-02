@@ -57,14 +57,14 @@ int main(){
         while (ptr != NULL){
         printf("%d\n", ptr->data);
         ptr = ptr->link;
-    }
+        }
 
         ptr = start2;
         printf("Elements of node 2\n");
         while (ptr != NULL){
         printf("%d\n", ptr->data);
         ptr = ptr->link;
-    }
+        }
 
     }
 }
