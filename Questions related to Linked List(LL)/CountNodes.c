@@ -24,10 +24,10 @@ int main(){
 
     if (start == NULL){
         printf("This Single Linked List has %d nodes", c);
+        exit(0);
     }
     else{
-        c=1;
-        while (ptr->link != NULL){
+        while (ptr != NULL){
         c=c+1;
         ptr = ptr->link;
         }
