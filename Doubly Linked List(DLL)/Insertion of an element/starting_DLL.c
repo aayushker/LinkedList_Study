@@ -32,7 +32,6 @@ int main(){
         scanf("%d",&ele);
         new->llink = NULL;
         new->rlink = start;
-        new->llink = new;
         new->data = ele;
         start = new;
     }
