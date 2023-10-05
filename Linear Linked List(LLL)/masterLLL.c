@@ -36,7 +36,7 @@ int endingI(int ele){
     else{
         ptr = start;
 
-        while (ptr != NULL){
+        while (ptr->link != NULL){
             ptr = ptr->link;
         }
         ptr->link = new;
@@ -52,11 +52,13 @@ int betweenI(int ele, int key){
     }
     else{
         ptr = start;
-        while(ptr->data == key){
+
+        while(ptr->data != key){
             ptr = ptr->link;
         }
-        ptr->link = new;
         new->link = ptr->link;
+        ptr->link = new;
+        
     }
 }
 
@@ -86,7 +88,7 @@ int endingD(){
             ptr1 = ptr;
             ptr = ptr->link;
         }
-        ptr1 = NULL;
+        ptr1->link = NULL;
         printf("Deleted the last node %d\n",ptr->data);
         free(ptr);
     }
@@ -117,17 +119,18 @@ int reversal(){
         exit(0);
     }
     else{
-        Node *prev, *next, *temp;
+        Node *prev, *next;
         prev = NULL;
         ptr = start;
         while (ptr != NULL){
-            temp = ptr->link;
+            next = ptr->link;
             ptr->link = prev;
             prev = ptr;
-            ptr = temp;
+            ptr = next;
         }
         start = prev;
-        printf("The reversed the LL");
+        printf("Reversed the LL\n");
+        display();
     }
 }
  
@@ -147,7 +150,7 @@ void display (){
     
 
 int main(){
-    int ele, key, op;
+    int ele=0, key=0, op;
     do {
         printf("//**Menu**//\n");
         printf("Press 1 for inserting as first node\n");
@@ -159,6 +162,7 @@ int main(){
         printf("Press 7 for reversing the LL\n");
         printf("Press 8 to display the LL\n");
         printf("Press 9 to exit\n");
+        printf("________________________________________________\n");
         printf("Enter your choice\n");
         scanf("%d",&op);
 
@@ -199,7 +203,6 @@ int main(){
 
             case 7:
                 reversal();
-                display();
 
             case 8:
                 display();
